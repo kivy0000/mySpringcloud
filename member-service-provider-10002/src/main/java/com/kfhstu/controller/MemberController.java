@@ -21,7 +21,7 @@ public class MemberController {
 
     @RequestMapping("/member/get/{id}")
     public Member index(@PathVariable String id) {
-        System.out.println("provider10000得到请求");
+        System.out.println("provider10002得到请求");
         return memberService.queryMemberById(Long.valueOf(id));
     }
 }

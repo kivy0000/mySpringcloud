@@ -16,7 +16,7 @@
     <dependencies>
         <!-- 引入 e_commerce_center-common-api -->
         <dependency>
-            <groupId>com.kfhstu</groupId>
+            <groupId>com.com.kfhstu</groupId>
             <artifactId>centor_common_api</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
