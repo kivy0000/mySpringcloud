@@ -14,6 +14,11 @@
 
 
     <dependencies>
+        <!-- 引入 eureka-client 依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
 
         <!--  引入抽取的公共部分  -->
         <dependency>

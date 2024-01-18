@@ -16,6 +16,12 @@
 
     <dependencies>
 
+<!--        引入eureka client ，作为服务提供者-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
         <!--  引入抽取的公共部分  -->
         <dependency>
             <groupId>com.kfhstu</groupId>
