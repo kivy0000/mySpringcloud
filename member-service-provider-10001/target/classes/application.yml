@@ -1,5 +1,5 @@
 server:
-  port: 20000 #设置端口为20000
+  port: 10001 #设置端口为10001
 spring:
   application:
     name: member-service-provider #当前服务名称

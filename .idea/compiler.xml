@@ -9,6 +9,8 @@
         <module name="member-eureka-server-9001" />
         <module name="member-service-consumer-80" />
         <module name="member-service-provider-10000" />
+        <module name="member-eureka-server-9002" />
+        <module name="member-service-provider-10001" />
         <module name="centor_common_api" />
       </profile>
     </annotationProcessing>
