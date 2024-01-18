@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>BaseCloud</artifactId>
+        <groupId>com.kfhstu</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+<!--  公共模块，目前用来放entity  -->
+
+    <artifactId>centor_common_api</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <!--
+             <optional>true</optional>:防止将该依赖传递到其他模块中
+            说的再具体一点，比如 member-service-consumer-80 模块依赖了本项目, 那么本项目不会把 lombok 传递给 member-service-consumer-80
+            不设置 optional 或者 optional 是 false，表示传递依赖
+            -->
+        </dependency>
+
+    </dependencies>
+
+
+</project>

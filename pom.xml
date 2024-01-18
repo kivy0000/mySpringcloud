@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.kfhstu</groupId>
+    <artifactId>BaseCloud</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <!-- 管理其他模块 -->
+    <modules>
+        <module>member-service-provider-10000</module>
+        <module>member-service-consumer-80</module>
+        <module>centor_common_api</module>
+    </modules>
+
+    <name>Maven</name>
+    <!--   Index Page -->
+    <url>http://maven.apache.org/</url>
+    <inceptionYear>2001</inceptionYear>
+    <!-- 统一配置各个依赖版本 -->
+    <properties>
+        <!--  编译器版本限制,junit版本限制  -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <junit.version>4.12</junit.version>
+        <!--老师说明: 使用最新版本的 log4j , 防止安全漏洞-->
+        <log4j.version>2.17.2</log4j.version>
+        <lombok.version>1.18.20</lombok.version>
+        <mysql.version>5.1.47</mysql.version>
+        <druid.version>1.1.17</druid.version>
+        <mybatis.spring.boot.version>2.2.0</mybatis.spring.boot.version>
+    </properties>
+    <!-- 1. dependencyManagement
+    作用: 子模块继承后, 锁定版本, 子模块不用再写 version
+    但使用依赖仍然要引入
+    -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.2.2.RELEASE</version>
+                <!-- 老师解读:
+                1. type: pom 和 scope import 配合使用
+                2. 表 示 父 项 目 的 子 模 块 , 在 引 入 springboot 相 关 依 赖 时 锁 定 版 本 为
+                2.2.2.RELEASE
+                3. 通过 pom + import 解决 maven 单继承机制
+                -->
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2.1.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.spring.boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>${log4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.20</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

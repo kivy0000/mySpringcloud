@@ -1,0 +1,18 @@
+server:
+  port: 20000 #设置端口为20000
+spring:
+  application:
+    name: member-service-provider #当前服务名称
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #数据源类别
+    driver-class-name: org.gjt.mm.mysql.Driver #驱动注册
+    url: jdbc:mysql://mysql.sqlpub.com:3306/databaseofgoose?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: kivy0000
+    password: 7x9NnDUcNtj8zPUO
+    druid:
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: false
+mybatis:
+  mapperLocations: classpath:mapper/*.xml #后面 mapper 文件的位置
+  type-aliases-package: com.kfhstu.com.kfhstu.entity # 实体类的包
