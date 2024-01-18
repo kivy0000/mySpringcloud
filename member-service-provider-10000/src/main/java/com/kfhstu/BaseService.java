@@ -11,6 +11,8 @@ package com.kfhstu;
  *      (1)Eureka 包含两个组件∶Eureka Server 和 Eureka Client ,
  *                          Eureka Server用于提供服务注册，可以使用集群，如果服务模块超时未响应，会被剔除（根据策略）
  *                          client则提供调用服务的接口，同时满足负载均衡
+ *      (2)Eureka也是cs形式的，使用9001端口作为eureka服务端口，
+ *                          eureka的c与s端的通信可能也是通过socket完成的？
  *
  */
 public class BaseService {}

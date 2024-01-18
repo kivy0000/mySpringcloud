@@ -13,6 +13,7 @@
         <module>member-service-provider-10000</module>
         <module>member-service-consumer-80</module>
         <module>centor_common_api</module>
+        <module>member-eureka-server-9001</module>
     </modules>
 
     <name>Maven</name>
