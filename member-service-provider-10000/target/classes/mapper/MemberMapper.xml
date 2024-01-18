@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--注意全类名和包名复制所带来的影响-->
+<mapper namespace="com.kfhstu.dao.MemberDao">
+    <insert id="save" parameterType="com.kfhstu.entity.Member" useGeneratedKeys="true" keyProperty="id">
+        insert into member(NAME,pwd,mobile,email,gender) values(#{name}, md5(#{pwd}),
+        #{mobile},#{email}, #{gender});
+    </insert>
+
+    <resultMap id="BaseResultMap" type="com.kfhstu.entity.Member">
+        <id column="id" property="id" jdbcType="BIGINT"></id>
+        <id column="name" property="name" jdbcType="VARCHAR"></id>
+        <id column="pwd" property="pwd" jdbcType="VARCHAR"></id>
+        <id column="mobile" property="mobile" jdbcType="VARCHAR"></id>
+        <id column="email" property="email" jdbcType="VARCHAR"></id>
+        <id column="gender" property="gender" jdbcType="TINYINT"></id>
+    </resultMap>
+
+    <select id="queryMemberById" parameterType="Long" resultMap="BaseResultMap">
+            select * from member where id=#{id}
+    </select>
+</mapper>

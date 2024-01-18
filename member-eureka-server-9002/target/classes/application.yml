@@ -1,0 +1,11 @@
+server:
+  port: 9002
+eureka:
+  instance:
+    hostname: eureka9002.com #服务端实例名
+  client:
+    register-with-eureka: false #不向注册中心注册自己，本身即是注册中心
+    fetch-registry: false #表示自己就是注册中心，职责是维护服务实例，并不需要去检索服务
+
+    service-url: #与eureka交互的模块所依赖的地址,即对需要注册的模块所提供的地址
+      defaultZone: http://eureka9001.com:9001/eureka/ #与9001注册中心相互注册
