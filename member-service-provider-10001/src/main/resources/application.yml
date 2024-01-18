@@ -15,7 +15,7 @@ spring:
       test-while-idle: false
 mybatis:
   mapperLocations: classpath:mapper/*.xml #后面 mapper 文件的位置
-  type-aliases-package: com.kfhstu.com.kfhstu.entity # 实体类的包
+  type-aliases-package: com.kfhstu.entity # 实体类的包
 
 #eureka 客户端配置
 eureka:
