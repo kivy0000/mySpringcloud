@@ -16,6 +16,7 @@
         <module>member-eureka-server-9001</module>
         <module>member-eureka-server-9002</module>
         <module>member-service-provider-10002</module>
+        <module>member-service-consumer-openfeign-80</module>
     </modules>
 
     <name>Maven</name>

@@ -23,7 +23,23 @@ package com.kfhstu;
  *
  *      (5)获取 Eureka Server 服务注册信息，即注册的服务模块 -DiscoveryClient
  *
- *  注意！！！！：注意全类名和包名复制所带来的影响
+ *  注意！！！！：注意全类名和包名复制所带来的影响,消费者和服务模块都要注册，只是name不同，人为定义的功能不同
+ *
+ * 3. Ribbon,负载均衡工具，进程式LB，一般配合restTemplate使用
+ *      LB：负载均衡，一般两种：集中式LB（比如独立的硬件、软件nginx，专门做这个）
+ *                          和进程式LB，集成到消费方，用合理算法从得到的注册服务选出一个可用的
+ *
+ *      (1)使用配置类引入ribbon负载均衡算法，使用@RibbonClient指定要对哪些请求进行负载均衡处理
+ *
+ *  4.feign负载均衡工具：内置ribbon负载均衡工具，能更好的开发service层
+ *                  一般使用openfeign
+ *       (1)创建80-feign模块，区别于单纯使用ribbon的模块，加入openfeign的starter
+ *
+ *       (2)配置feign的日志，通过yml文件，指定某个服务层的日志类别
+ *
+ *
+ *
+ *
  *
  */
 public class BaseService {}
