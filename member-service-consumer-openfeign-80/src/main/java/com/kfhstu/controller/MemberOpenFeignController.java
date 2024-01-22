@@ -1,7 +1,6 @@
 package com.kfhstu.controller;
 
 import com.kfhstu.entity.Member;
-import com.kfhstu.entity.Result;
 import com.kfhstu.service.MemberOpenFeignService;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
